@@ -150,7 +150,7 @@ func (p *Port) Flush() error {
 		uintptr(syscall.TCIOFLUSH),
 	)
 
-	err := nil
+	var err error
 	if errno != 0 {
 		err = errno
 	}
